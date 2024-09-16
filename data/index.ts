@@ -1,5 +1,7 @@
 // src/data/index.ts
 
+import { link } from "fs";
+
 // Define the Project interface and project data in index.ts
 
 export interface Project {
@@ -27,7 +29,7 @@ export const projects: Project[] = [
       "sqlite.svg",
       "figma.svg",
     ],
-    link: "", // Provide a link if available
+    link: "https://incronix.com/", // Provide a link if available
   },
   {
     id: 2,
@@ -142,37 +144,6 @@ export const gridItems = [
   },
 ];
 
-export const testimonials = [
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-  // Add more testimonials as needed
-];
-
-export const companies = [
-  {
-    id: 1,
-    name: "cloudinary",
-    img: "/cloud.svg",
-    nameImg: "/cloudName.svg",
-  },
-  // Add more companies as needed
-];
-
-export const workExperience = [
-  {
-    id: 1,
-    title: "Frontend Engineer Intern",
-    desc: "Assisted in the development of a web-based platform using React.js, enhancing interactivity.",
-    className: "md:col-span-2",
-    thumbnail: "/exp1.svg",
-  },
-  // Add more work experiences as needed
-];
-
 export const socialMedia = [
   {
     id: 1,
@@ -197,27 +168,19 @@ export const timelineData = [
       • Developed a Web Quotation Calculator that reduced data collection time by 30% and provided instant, accurate quotations.
       • Maintained technical documentation, conducted unit and integration testing, ensuring high application quality.
     `,
+    link: "https://incronix.com/", // Incronix specific link
   },
   {
     id: 2,
     title: "Placement Coordinator",
+    company: "Indira Group Of Institute",
     content: ` 
-    • Built and maintained strong relationships with 
-employers and industry clients to create 
-placement opportunities.
-    • Coordinated campus recruitment drives and 
-events with effective communication and 
-organizational skills.
-    • Managed the placement process, including 
-scheduling interviews and communicating with 
-students and recruiters, demonstrating 
-leadership, adaptability, and a proactive 
-approach.
-    • Efficiently managed multiple tasks and 
-deadlines during recruitment drives and 
-events.`,
+      • Built and maintained strong relationships with employers and industry clients to create placement opportunities.
+      • Coordinated campus recruitment drives and events with effective communication and organizational skills.
+      • Managed the placement process, including scheduling interviews and communicating with students and recruiters, demonstrating leadership, adaptability, and a proactive approach.
+      • Efficiently managed multiple tasks and deadlines during recruitment drives and events.
+    `,
+    link: "https://indiraedu.com/", // Indira Group specific link
   },
   // Add more timeline events as needed
 ];
-
-// Define any other necessary data or functions here

@@ -7,17 +7,21 @@ import {
 } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 
+// Define the interface for the TimelineEntry
 interface TimelineEntry {
   title: string;
-  company: string;
+  company?: string; // Company is now optional
   content: React.ReactNode;
+  link: string; // Updated to be a string link
 }
 
-const data = [
+// Example data for the timeline entries
+const data: TimelineEntry[] = [
   {
-    title: "Software Developer Intern",
+    title: "Software Developer Internship",
     company: "Incronix Technology Pvt Ltd",
     content: <div>{/* Your content here */}</div>,
+    link: "https://incronix.com/", // Corrected link format
   },
   {
     title: "Placement Coordinator",
@@ -36,10 +40,12 @@ const data = [
         </p>
       </div>
     ),
+    link: "https://indiraedu.com/", // Corrected link format
   },
   // Add more entries as needed
 ];
 
+// Timeline component
 export const Timeline = ({ data = [] }: { data: TimelineEntry[] }) => {
   const ref = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -87,15 +93,17 @@ export const Timeline = ({ data = [] }: { data: TimelineEntry[] }) => {
                   <h3 className="hidden md:block text-xl md:pl-20 md:text-2xl font-bold text-neutral-100 dark:text-neutral-100">
                     {item.title}
                   </h3>
-                  <h4 className="hidden md:block text-lg md:pl-20 text-neutral-600 dark:text-neutral-400">
-                    <a
-                      href="https://incronix.com/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {item.company}
-                    </a>
-                  </h4>
+                  {item.company && ( // Render company only if it exists
+                    <h4 className="hidden md:block text-lg md:pl-20 text-neutral-600 dark:text-neutral-400">
+                      <a
+                        href={item.link} // Use the link from data
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {item.company}
+                      </a>
+                    </h4>
+                  )}
                 </div>
               </div>
 
@@ -103,9 +111,17 @@ export const Timeline = ({ data = [] }: { data: TimelineEntry[] }) => {
                 <h3 className="md:hidden block text-2xl mb-4 text-left font-bold text-neutral-100 dark:text-neutral-100">
                   {item.title}
                 </h3>
-                <h4 className="md:hidden block text-xl mb-4 text-left text-neutral-600 dark:text-neutral-400">
-                  {item.company}
-                </h4>
+                {item.company && (
+                  <h4 className="md:hidden block text-xl mb-4 text-left text-neutral-600 dark:text-neutral-400">
+                    <a
+                      href={item.link} // Use the link from data
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {item.company}
+                    </a>
+                  </h4>
+                )}
                 {item.content}
               </div>
             </div>
