@@ -1,7 +1,18 @@
 "use client";
 import React from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
+// Define keyframes for the glow animation
+const glowAnimation = keyframes`
+  from {
+    text-shadow: 0 0 5px #00f, 0 0 10px #00f, 0 0 15px #00f, 0 0 20px #00f, 0 0 25px #00f;
+  }
+  to {
+    text-shadow: 0 0 10px #00f, 0 0 15px #00f, 0 0 20px #00f, 0 0 25px #00f, 0 0 30px #00f;
+  }
+`;
+
+// Styled components
 const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -31,7 +42,8 @@ const Email = styled.h1`
   transition: color 0.3s ease; /* Smooth transition for the color change */
 
   &:hover {
-    color: yellow; /* Mustard yellow on hover */
+    color: cyan; /* Cyan color on hover */
+    animation: ${glowAnimation} 1s ease-in-out infinite alternate; /* Apply glow animation */
   }
 `;
 
@@ -56,7 +68,7 @@ const Separator = styled.span`
 const About: React.FC = () => {
   return (
     <Container>
-      <Subtitle>Looking for a new talent?</Subtitle>
+      <Subtitle>Looking for new talent?</Subtitle>
       <Email>siddheshsomvanshi1@gmail.com</Email>
       <Links>
         <Link
