@@ -72,7 +72,7 @@ improving educational processes.`,
 // Export any other relevant data
 export const navItems = [
   { name: "About", link: "#about" },
-  { name: "Work Experience", link: "#work experience" },
+  { name: "Experience", link: "#work experience" },
   { name: "Projects", link: "#projects" },
   { name: "Contact", link: "#contact" },
 ];
