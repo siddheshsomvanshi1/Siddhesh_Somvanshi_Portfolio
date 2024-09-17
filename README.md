@@ -104,10 +104,4 @@
   </code></pre>
 </div>
 
-
-</div>
-
-<div id="license">
-  <h2>📄 License</h2>
-  <p>This project is licensed under the <strong>MIT License</strong>. See the <a href="./LICENSE">LICENSE</a> file for details.</p>
 </div>
