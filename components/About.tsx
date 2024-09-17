@@ -35,7 +35,7 @@ const Subtitle = styled.h2`
 `;
 
 const Email = styled.h1`
-  font-size: 28px;
+  font-size: 20px;
   font-weight: 600;
   margin-bottom: 30px;
   word-break: break-all;
