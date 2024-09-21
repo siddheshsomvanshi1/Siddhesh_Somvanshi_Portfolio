@@ -129,53 +129,42 @@ export const BentoGridItem = ({
           {id === 2 && <GridGlobe />}
           {/* Tech Stack List */}
           {id === 3 && (
-            <div className="flex flex-wrap justify-center items-center gap-1 lg:gap-5 w-full absolute">
-              {/* Row 1: Java and Android */}
-              <div className="flex flex-col gap-3 md:gap-3 lg:gap-8">
-                <div className="flex flex-row justify-center gap-1 lg:gap-5">
-                  {/* Display Java */}
-                  <span className="lg:py-3 lg:px-3 py-3 px-3 rounded-lg text-center bg-[#10132E]">
-                    Java
-                  </span>
-                  <span className="lg:py-3 lg:px-3 py-3 px-3 rounded-lg text-center bg-[#10132E]">
-                    Python
-                  </span>
-                  {/* Display Android */}
-                </div>
-                <div className="flex flex-row justify-center gap-1 lg:gap-5">
-                  {/* Display Java again */}
-                  <span className="lg:py-3 lg:px-3 py-3 px-3 rounded-lg text-center bg-[#10132E]">
-                    SQL
-                  </span>
-                  {/* Display Android again */}
-                  <span className="lg:py-3 lg:px-3 py-3 px-3 rounded-lg text-center bg-[#10132E]">
-                    Android
-                  </span>
-                </div>
+            <div className="flex flex-wrap justify-center items-center gap-1 lg:gap-5 w-full overflow-x-auto p-2 md:p-0">
+              {/* Row 1: Java and Python */}
+              <div className="flex flex-row flex-wrap justify-center gap-1 lg:gap-5">
+                <span className="lg:py-3 lg:px-3 py-2 px-2 rounded-lg text-center bg-[#10132E] text-sm lg:text-base">
+                  Java
+                </span>
+                <span className="lg:py-3 lg:px-3 py-2 px-2 rounded-lg text-center bg-[#10132E] text-sm lg:text-base">
+                  Python
+                </span>
               </div>
-
-              {/* Row 2: ReactJs and Subject 4 */}
-              <div className="flex flex-col gap-3 md:gap-3 lg:gap-8">
-                <div className="flex flex-row justify-center gap-1 lg:gap-5">
-                  {/* Display ReactJs */}
-                  <span className="lg:py-3 lg:px-3 py-3 px-3 rounded-lg text-center bg-[#10132E]">
-                    Javascript
-                  </span>
-                  {/* Display Subject 4 */}
-                  <span className="lg:py-3 lg:px-3 py-3 px-3 rounded-lg text-center bg-[#10132E]">
-                    Linux
-                  </span>
-                </div>
-                <div className="flex flex-row justify-center gap-1 lg:gap-5">
-                  {/* Display ReactJs again */}
-                  <span className="lg:py-3 lg:px-3 py-3 px-3 rounded-lg text-center bg-[#10132E]">
-                    ReactJs
-                  </span>
-                  {/* Display Subject 4 again */}
-                  <span className="lg:py-3 lg:px-3 py-3 px-3 rounded-lg text-center bg-[#10132E]">
-                    DevOps
-                  </span>
-                </div>
+              {/* Row 2: SQL and Android */}
+              <div className="flex flex-row flex-wrap justify-center gap-1 lg:gap-5">
+                <span className="lg:py-3 lg:px-3 py-2 px-2 rounded-lg text-center bg-[#10132E] text-sm lg:text-base">
+                  SQL
+                </span>
+                <span className="lg:py-3 lg:px-3 py-2 px-2 rounded-lg text-center bg-[#10132E] text-sm lg:text-base">
+                  Android
+                </span>
+              </div>
+              {/* Row 3: JavaScript and Linux */}
+              <div className="flex flex-row flex-wrap justify-center gap-1 lg:gap-5">
+                <span className="lg:py-3 lg:px-3 py-2 px-2 rounded-lg text-center bg-[#10132E] text-sm lg:text-base">
+                  Javascript
+                </span>
+                <span className="lg:py-3 lg:px-3 py-2 px-2 rounded-lg text-center bg-[#10132E] text-sm lg:text-base">
+                  Linux
+                </span>
+              </div>
+              {/* Row 4: ReactJs and DevOps */}
+              <div className="flex flex-row flex-wrap justify-center gap-1 lg:gap-5">
+                <span className="lg:py-3 lg:px-3 py-2 px-2 rounded-lg text-center bg-[#10132E] text-sm lg:text-base">
+                  ReactJs
+                </span>
+                <span className="lg:py-3 lg:px-3 py-2 px-2 rounded-lg text-center bg-[#10132E] text-sm lg:text-base">
+                  DevOps
+                </span>
               </div>
             </div>
           )}
