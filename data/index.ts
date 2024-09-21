@@ -1,5 +1,6 @@
 // src/data/index.ts
 
+import { Card } from "@/components/ui/ContainerScrollAnimation";
 import { link } from "fs";
 
 // Define the Project interface and project data in index.ts
@@ -183,4 +184,64 @@ export const timelineData = [
     link: "https://indiraedu.com/", // Indira Group specific link
   },
   // Add more timeline events as needed
+];
+
+export const cards = [
+  {
+    title: "Foundations of User Experience (UX) Design",
+    description: "Certification by Google",
+    src: "/c1.png",
+    ctaText: "Check",
+    ctaLink:
+      "https://www.coursera.org/account/accomplishments/verify/3YLVLXFSCSCQ?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course",
+    content:
+      "This certification teaches UX basics, including user-centered design, prototyping, usability, and accessibility. It helps beginners understand the design process and create user-friendly products, preparing them for a career in UX.",
+  },
+  {
+    title: "Ask Questions to Make Data-Driven Decisions",
+    description: "Certification by Google",
+    src: "/c2.jpg",
+    ctaText: "Check",
+    ctaLink:
+      "https://www.coursera.org/account/accomplishments/verify/7VXB8FWJ9HW6?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course",
+    content:
+      "This course teaches how to leverage data for informed decision-making, using structured problem-solving approaches, spreadsheets for data management, and key concepts of structured thinking.",
+  },
+  {
+    title: "Foundations: Data, Data, Everywhere",
+    description: "Certification by Google",
+    src: "/c3.jpg",
+    ctaText: "Check",
+    ctaLink:
+      "https://www.coursera.org/account/accomplishments/verify/8898YY9SHKPF?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course",
+    content:
+      "Data analytics involves data (raw facts), data analysis (interpretation), and data ecosystems (sources). Analytical thinking uses data-driven problem-solving. Tools include spreadsheets, SQL, and Tableau. Data analysts analyze data to provide insights for decision-making.",
+  },
+  {
+    title: "Java HackerRank",
+    description: "Certification by HackerRank",
+    src: "/c4.jpg",
+    ctaText: "Check",
+    ctaLink: "https://www.hackerrank.com/certificates/abb26ef60982",
+    content:
+      "This certificate validates foundational Java programming skills, including syntax, object-oriented concepts, and basic application development.",
+  },
+  {
+    title: "IEEE Student Member",
+    description: "Certification by IEEE",
+    src: "/c5.jpg",
+    ctaText: "Check",
+    ctaLink: "https://example.com/card5",
+    content:
+      "As an IEEE Student Member, I engage with a global network of professionals, access resources for learning and development, and participate in events that enhance my knowledge in engineering and technology.",
+  },
+  {
+    title: "Advance Java",
+    description: "Certification by Gryphon",
+    src: "/c6.jpg",
+    ctaText: "Check",
+    ctaLink: "https://example.com/card6",
+    content:
+      "This certificate demonstrates proficiency in advanced Java concepts, including multithreading, Java Server Pages (JSP), Servlets, and frameworks such as Spring and Hibernate, equipping me for complex application development.",
+  },
 ];
