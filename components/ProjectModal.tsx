@@ -24,6 +24,13 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, closeModal }) => {
     };
   }, [closeModal]);
 
+  // Function to handle Visit button click
+  const handleVisitClick = () => {
+    if (project.link) {
+      window.open(project.link, "_blank");
+    }
+  };
+
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-70 z-50">
       <div
@@ -60,7 +67,13 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, closeModal }) => {
           </h2>
           <p className="text-gray-400 mt-2 text-center">{project.des}</p>
 
-          <button className="mt-4 px-5 py-2 bg-blue-600 text-white rounded-lg font-semibold shadow-lg transition-all duration-300 ease-in-out hover:bg-blue-700 focus:bg-blue-700 focus:ring-0 transform hover:scale-105">
+          <button
+            className={`mt-4 px-5 py-2 bg-blue-600 text-white rounded-lg font-semibold shadow-lg transition-all duration-300 ease-in-out hover:bg-blue-700 focus:bg-blue-700 focus:ring-0 transform hover:scale-105 ${
+              !project.link ? "opacity-50 cursor-not-allowed" : ""
+            }`}
+            onClick={handleVisitClick}
+            disabled={!project.link}
+          >
             Visit
           </button>
 
