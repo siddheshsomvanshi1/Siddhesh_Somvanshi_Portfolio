@@ -115,7 +115,7 @@ export const BentoGridItem = ({
         <div
           className={cn(
             titleClassName,
-            "relative flex flex-col items-center justify-center lg:p-10 transition duration-200 group-hover/bento:translate-x-2 md:h-full min-h-36 text-center"
+            "relative flex flex-col items-center justify-center lg:p-1 transition duration-200 group-hover/bento:translate-x-2 md:h-full min-h-36 text-center"
           )}
         >
           {/* Description and Title */}

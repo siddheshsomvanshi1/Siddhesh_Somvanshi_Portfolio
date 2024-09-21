@@ -68,7 +68,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, closeModal }) => {
           <p className="text-gray-400 mt-2 text-center">{project.des}</p>
 
           <button
-            className={`mt-4 px-5 py-2 bg-blue-600 text-white rounded-lg font-semibold shadow-lg transition-all duration-300 ease-in-out hover:bg-blue-700 focus:bg-blue-700 focus:ring-0 transform hover:scale-105 ${
+            className={`mt-2 px-5 py-2 bg-blue-600 text-white rounded-lg font-semibold shadow-lg transition-all duration-300 ease-in-out hover:bg-blue-700 focus:bg-blue-700 focus:ring-0 transform hover:scale-105 ${
               !project.link ? "opacity-50 cursor-not-allowed" : ""
             }`}
             onClick={handleVisitClick}
@@ -77,7 +77,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, closeModal }) => {
             Visit
           </button>
 
-          <div className="flex gap-2 mt-0 mb-12">
+          <div className=" mt-2 flex gap-2 mt-0 mb-12">
             {project.iconLists.map((icon, index) => (
               <img
                 key={index}
