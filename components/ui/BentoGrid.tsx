@@ -137,11 +137,16 @@ export const BentoGridItem = ({
                   <span className="lg:py-3 lg:px-3 py-3 px-3 rounded-lg text-center bg-[#10132E]">
                     Java
                   </span>
+                  <span className="lg:py-3 lg:px-3 py-3 px-3 rounded-lg text-center bg-[#10132E]">
+                    Python
+                  </span>
                   {/* Display Android */}
                 </div>
                 <div className="flex flex-row justify-center gap-1 lg:gap-5">
                   {/* Display Java again */}
-
+                  <span className="lg:py-3 lg:px-3 py-3 px-3 rounded-lg text-center bg-[#10132E]">
+                    SQL
+                  </span>
                   {/* Display Android again */}
                   <span className="lg:py-3 lg:px-3 py-3 px-3 rounded-lg text-center bg-[#10132E]">
                     Android
