@@ -1,8 +1,14 @@
-import { FaLocationArrow } from "react-icons/fa6";
+import { FaLocationArrow } from "react-icons/fa";
 import MagicButton from "./MagicButton";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
+import { LinkPreview } from "./ui/LinkPreview"; // Corrected import
+import { useState, useEffect } from "react";
 
 const Hero = () => {
+  const [isClient, setIsClient] = useState(false);
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
   return (
     <div className="relative pb-20 pt-2">
       <div
@@ -38,17 +44,27 @@ const Hero = () => {
                 position="right"
               />
             </a>
-            <a
-              href="https://drive.google.com/file/d/1LYlc47HaBLQdBAhJRgjTa3Pf8zgnkkzJ/view?usp=sharing"
-              target="_blank"
-              rel="noopener noreferrer"
+
+            {/* Use LinkPreview for the CV button */}
+            <LinkPreview
+              url="https://drive.google.com/file/d/1LYlc47HaBLQdBAhJRgjTa3Pf8zgnkkzJ/view?usp=sharing"
+              className="my-link-class"
+              isStatic={false}
             >
-              <MagicButton
-                title="View/Download CV"
-                icon={<FaLocationArrow />}
-                position="right"
-              />
-            </a>
+              {isClient && (
+                <a
+                  href="https://drive.google.com/file/d/1LYlc47HaBLQdBAhJRgjTa3Pf8zgnkkzJ/view?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <MagicButton
+                    title="View/Download CV"
+                    icon={<FaLocationArrow />}
+                    position="right"
+                  />
+                </a>
+              )}
+            </LinkPreview>
           </div>
         </div>
       </div>

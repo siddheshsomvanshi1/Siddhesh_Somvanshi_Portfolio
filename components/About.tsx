@@ -1,6 +1,10 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { FaLocationArrow } from "react-icons/fa";
 import styled, { keyframes } from "styled-components";
+import MagicButton from "./MagicButton";
+import { LinkPreview } from "./ui/LinkPreview";
+import { Button } from "./ui/MovingBorders";
 
 // Define keyframes for the glow animation
 const glowAnimation = keyframes`
@@ -66,26 +70,45 @@ const Separator = styled.span`
 `;
 
 const About: React.FC = () => {
+  const [isClient, setIsClient] = useState(false);
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
   return (
     <Container>
-      <Subtitle>Looking for new talent?</Subtitle>
+      <Subtitle>"Let’s Build Something Great Together: Hire Me!"</Subtitle>
       <Email>siddheshsomvanshi1@gmail.com</Email>
       <Links>
-        <Link
-          href="https://www.linkedin.com/in/siddheshsomvanshi/"
-          target="_blank"
-          rel="noopener noreferrer"
+        <LinkPreview
+          url="https://www.linkedin.com/in/siddheshsomvanshi/"
+          className="my-link-class"
         >
-          LinkedIn
-        </Link>
+          {isClient && (
+            <a
+              href="https://www.linkedin.com/in/siddheshsomvanshi/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button position="right">LinkedIn</Button>
+            </a>
+          )}
+        </LinkPreview>
         <Separator>•</Separator>
-        <a
-          href="https://drive.google.com/file/d/1LYlc47HaBLQdBAhJRgjTa3Pf8zgnkkzJ/view?usp=sharing"
-          target="_blank"
-          rel="noopener noreferrer"
+        <LinkPreview
+          url="https://drive.google.com/file/d/1LYlc47HaBLQdBAhJRgjTa3Pf8zgnkkzJ/view?usp=sharing"
+          className="my-link-class"
+          isStatic={false}
         >
-          Download
-        </a>
+          {isClient && (
+            <a
+              href="https://drive.google.com/file/d/1LYlc47HaBLQdBAhJRgjTa3Pf8zgnkkzJ/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button position="right">Download CV</Button>
+            </a>
+          )}
+        </LinkPreview>
       </Links>
     </Container>
   );
