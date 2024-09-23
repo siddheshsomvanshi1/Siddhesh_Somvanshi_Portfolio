@@ -5,6 +5,7 @@ import styled, { keyframes } from "styled-components";
 import MagicButton from "./MagicButton";
 import { LinkPreview } from "./ui/LinkPreview";
 import { Button } from "./ui/MovingBorders";
+import Image from "next/image"; // Import Image component for optimization
 
 // Define keyframes for the glow animation
 const glowAnimation = keyframes`
@@ -71,12 +72,14 @@ const Separator = styled.span`
 
 const About: React.FC = () => {
   const [isClient, setIsClient] = useState(false);
+
   useEffect(() => {
     setIsClient(true);
-  }, []);
+  }, []); // Add any relevant dependencies here if needed
+
   return (
     <Container>
-      <Subtitle>"Let’s Build Something Great Together: Hire Me!"</Subtitle>
+      <Subtitle>Let’s Build Something Great Together: Hire Me!</Subtitle>
       <Email>siddheshsomvanshi1@gmail.com</Email>
       <Links>
         <LinkPreview
